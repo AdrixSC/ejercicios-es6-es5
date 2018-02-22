@@ -1,21 +1,27 @@
-                        // ES5
-
+// ES5
 
 // 1.1- Mostrar en la consola un mensaje que diga... "El numero de generaciones es (numero de generaciones en total)"
 
+function generations(array) {
+    var accessGeneration = Object.keys(laboratoria.generaciones);
+    totalGeneration = accessGeneration.length
+    console.log("El numero de generaciones es" + " " + totalGeneration);
+}
 
-
-
-
-
-
+generations(laboratoria);
 
 // 1.2- Mostrar en la consola un mensaje que diga ... "La (numero de generacion) tuvo (numero de alumnas en esa generacion) alumnas" [Un mensaje por cada generacion]
 
 
+function numberGeneration(array) {
+    var accessGeneration = Object.keys(laboratoria.generaciones);
+    //console.log(accessGeneration)
+    var alumnas = laboratoria.generaciones.primera.alumnas;
+    //console.log(alumnas)
 
-
-
+    console.log("La" + " " + accessGeneration[0] + " " + "generación" + " " + "tuvo" + " " + alumnas + " " + "alumnas");
+};
+numberGeneration(laboratoria);
 
 
 // 1.3- Mostrar en la consola un mensaje que diga "El promedio de edad de la (numero de generacion) generacion es de (promedio de numero de alumas en la generacion)" [un mensaje por generacion]
@@ -36,12 +42,10 @@
 
 
 
-                                  
 // Alcance 2... 
 
 
 // 2.1- Mostrar en la consola un mensaje que diga... ""El numero total de alumnas en todas las generaciones es: (total de alumnas de todas las generaciones) y en promedio (el promedio de alumnas por generacion) mujeres  cursan Laboratoria cada generacion"
-
 
 
 
@@ -71,11 +75,6 @@
 
 
 
-
-
-
-
-
 // Alcance 4....
 
 // Agregar la siguiente generacion a la data desde una funcion obteniendo los datos por medio de prompts: 
@@ -85,5 +84,4 @@
 
 
 
-
-// ----------------------------Ahora comenta todo el código anterior y escribelo en ES6----------------
+// ----------------------------Ahora comenta todo el código anterior y escribelo en ES6----------------v
