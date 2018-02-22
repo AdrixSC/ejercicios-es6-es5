@@ -39,7 +39,7 @@ const totalByCategory = (inventory, category) => {
     const sumInventory = (prodAnterior, prodActual) => prodAnterior + parseInt(prodActual.stock, 10);
     let filtrando = inventory.filter(filterCategory).reduce(sumInventory, 0);
     console.log(filtrando);
-    return filtrando;
+    //return filtrando;
 };
 
 totalByCategory(inventory, "beverage");

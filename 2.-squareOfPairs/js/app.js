@@ -9,7 +9,7 @@
 //var array = [1, 2, 3, 4, 5];
 
 
-// declaración de la funcion 
+// declaración de la funcion
 
 function square(array) {
     var numDuplicate = array.map(function(array) {
@@ -38,7 +38,7 @@ let array = [2, 4, 6];
 // declara la funcion y ejecuta el código
 let square = array => {
     let numDuplicate = array.map(array => {
-        if (array > 0 || array & 2 == 0) {
+        if (array > 0 || array % 2 == 0) {
             return array * array
         } else {
             return array
