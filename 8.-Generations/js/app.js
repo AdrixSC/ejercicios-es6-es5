@@ -1,33 +1,24 @@
-// ES5
-
-// 1.1- Mostrar en la consola un mensaje que diga... "El numero de generaciones es (numero de generaciones en total)"
-
-function generations(array) {
-    var accessGeneration = Object.keys(laboratoria.generaciones);
-    totalGeneration = accessGeneration.length
-    console.log("El numero de generaciones es" + " " + totalGeneration);
+const showNumOfGenerations = (generaciones) => {
+    let totalGenerations = generaciones.length;
+    // console.log(totalGenerations);
+    console.log(`El numero de generaciones es ${totalGenerations}`)
 }
 
-generations(laboratoria);
 
 // 1.2- Mostrar en la consola un mensaje que diga ... "La (numero de generacion) tuvo (numero de alumnas en esa generacion) alumnas" [Un mensaje por cada generacion]
 
-
-function numberGeneration(array) {
-    var accessGeneration = Object.keys(laboratoria.generaciones);
-    //console.log(accessGeneration)
-    var alumnas = laboratoria.generaciones.primera.alumnas;
-    //console.log(alumnas)
-
-    console.log("La" + " " + accessGeneration[0] + " " + "generación" + " " + "tuvo" + " " + alumnas + " " + "alumnas");
-};
-numberGeneration(laboratoria);
-
+const numOfAlumnasByGenerations = (generations, totalNumAlumnsGenerations) => {
+    console.log(`La ${generations} generacion tuvo ${totalNumAlumnsGenerations} alumnas`);
+}
 
 // 1.3- Mostrar en la consola un mensaje que diga "El promedio de edad de la (numero de generacion) generacion es de (promedio de numero de alumas en la generacion)" [un mensaje por generacion]
 
 
+const averageAge = (generations, average) => {
+    console.log(`El promedio de edad de la ${generations} generacion es de ${average}`);
 
+
+}
 
 
 
@@ -39,13 +30,31 @@ numberGeneration(laboratoria);
 
 
 
+let getTheData = () => {
+    let generaciones = Object.keys(laboratoria.generaciones);
+    console.log(generaciones);
+
+    for (let index in laboratoria.generaciones) {
+        let generations = index;
+        let totalNumAlumnsGenerations = laboratoria.generaciones[index].alumnas;
+        let average = laboratoria.generaciones[index]["edad-promedio"];
+
+
+        showNumOfGenerations(generaciones);
+        numOfAlumnasByGenerations(generations, totalNumAlumnsGenerations);
+        averageAge(generations, average)
+    }
+}
+
+getTheData();
 
 
 
-// Alcance 2...
+// Alcance 2... 
 
 
 // 2.1- Mostrar en la consola un mensaje que diga... ""El numero total de alumnas en todas las generaciones es: (total de alumnas de todas las generaciones) y en promedio (el promedio de alumnas por generacion) mujeres  cursan Laboratoria cada generacion"
+
 
 
 
@@ -69,7 +78,7 @@ numberGeneration(laboratoria);
 
 // Alcance 3....
 
-// Crear botones para disparar cada uno de los puntos y pintarlos por medio del DOM
+// Crear botones para disparar cada uno de los puntos y pintarlos por medio del DOM 
 
 
 
