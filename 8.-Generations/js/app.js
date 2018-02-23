@@ -1,3 +1,6 @@
+// 1.1- Mostrar en la consola un mensaje que diga... "El numero de generaciones es (numero de generaciones en total)"
+
+//Funcion que accede y pinta el total de generaciones
 const showNumOfGenerations = (generaciones) => {
     let totalGenerations = generaciones.length;
     // console.log(totalGenerations);
@@ -7,41 +10,35 @@ const showNumOfGenerations = (generaciones) => {
 
 // 1.2- Mostrar en la consola un mensaje que diga ... "La (numero de generacion) tuvo (numero de alumnas en esa generacion) alumnas" [Un mensaje por cada generacion]
 
-const numOfAlumnasByGenerations = (generations, totalNumAlumnsGenerations) => {
-    console.log(`La ${generations} generacion tuvo ${totalNumAlumnsGenerations} alumnas`);
+//Funcion que pinta el total de las estudiantes por generacion
+const numStudentsByGenerations = (generations, totalStudentsGenerations) => {
+    console.log(`La ${generations} generacion tuvo ${totalStudentsGenerations} alumnas`);
 }
 
 // 1.3- Mostrar en la consola un mensaje que diga "El promedio de edad de la (numero de generacion) generacion es de (promedio de numero de alumas en la generacion)" [un mensaje por generacion]
 
-
+//Funcion que pinta el promedio de edad por generacion
 const averageAge = (generations, average) => {
     console.log(`El promedio de edad de la ${generations} generacion es de ${average}`);
 
 
 }
 
-
-
-
-
-
-
 // 1.4- Mostrar en la consola un mensaje que diga "El nombre mas comun de la (numero de generacion) generacion es: (nombre mas comun de esa generacion)"
 
-
-
+//Funcion en la que se llaman a todas las funciones y se accede a los valores requeridos
 let getTheData = () => {
     let generaciones = Object.keys(laboratoria.generaciones);
     console.log(generaciones);
 
     for (let index in laboratoria.generaciones) {
         let generations = index;
-        let totalNumAlumnsGenerations = laboratoria.generaciones[index].alumnas;
+        let totalStudentsGenerations = laboratoria.generaciones[index].alumnas;
         let average = laboratoria.generaciones[index]["edad-promedio"];
 
 
         showNumOfGenerations(generaciones);
-        numOfAlumnasByGenerations(generations, totalNumAlumnsGenerations);
+        numStudentsByGenerations(generations, totalStudentsGenerations);
         averageAge(generations, average)
     }
 }
